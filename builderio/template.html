@@ -1,0 +1,175 @@
+<div class="div-1">
+  <div class="div-2">
+    <div class="div-3"><h1>Enter some text...</h1></div>
+
+    <div class="div-4">
+      <div class="builder-columns div-5">
+        <div class="builder-column div-6">
+          <video
+            fit="cover"
+            position="center"
+            class="video-1"
+            data-name="video-1"
+          ><source src="/builderio/url/pixel.mp4" type="video/mp4"></video>
+        </div>
+
+        <div class="builder-column div-7">
+          <div class="div-8"><h1>Enter some text...</h1></div>
+
+          <div class="div-9">
+            <p>
+              <b>
+                I am a section! My content keeps from getting too wide, so that
+                it's easy to read even on big screens.
+              </b>
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur
+            </p>
+          </div>
+
+          <div class="div-10"><a href="" target="_self">Click me!</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .div-1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    background-color: rgba(0, 0, 0, 1);
+  }
+  .div-2 {
+    width: 100%;
+    align-self: stretch;
+    flex-grow: 1;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .div-3 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 20px;
+    line-height: normal;
+    height: auto;
+    text-align: center;
+    color: rgba(103, 245, 11, 1);
+  }
+  .div-4 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 20px;
+  }
+  .div-5 {
+    display: flex;
+  }
+  @media (max-width: 999px) {
+    .div-5 {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  .div-6 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: calc(50% - 10px);
+    margin-left: 0px;
+  }
+  @media (max-width: 999px) {
+    .div-6 {
+      width: 100%;
+    }
+  }
+  .video-1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 20px;
+  }
+  .div-7 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: calc(50% - 10px);
+    margin-left: 20px;
+  }
+  @media (max-width: 999px) {
+    .div-7 {
+      width: 100%;
+    }
+  }
+  .div-8 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+    line-height: normal;
+    height: auto;
+    color: rgba(1, 255, 246, 1);
+  }
+  .div-9 {
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+  }
+  .div-10 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 20px;
+    appearance: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #3898ec;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+  }
+</style>
+<script>
+  (() => {
+    const state = {};
+
+    // Function to update data bindings and loops
+    // call update() when you mutate state and need the updates to reflect
+    // in the dom
+    function update() {
+      document.querySelectorAll("[data-name='video-1']").forEach((el) => {
+        el.autoPlay = false;
+        el.muted = true;
+        el.loop = true;
+        el.playsInline = true;
+        el.aspectRatio = 0.7004048582995948;
+        el.lazyLoad = true;
+        el.controls = true;
+      });
+    }
+
+    // Update with initial state on first load
+    update();
+  })();
+</script>
